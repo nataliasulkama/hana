@@ -1,0 +1,173 @@
+/* Custom color theme properties */
+:root {
+  --f7-theme-color: #EE4949;
+  --f7-theme-color-rgb: 238, 73, 73;
+  --f7-theme-color-shade: #eb2424;
+  --f7-theme-color-tint: #f16e6e;
+}
+
+/* Left Panel right border when it is visible by breakpoint */
+.panel-left.panel-visible-by-breakpoint:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+
+/* Hide navbar link which opens left panel when it is visible by breakpoint */
+.panel-left.panel-visible-by-breakpoint ~ .view .navbar .panel-open[data-panel="left"] {
+  display: none;
+}
+
+/*
+  Extra borders for main view and left panel for iOS theme when it behaves as panel (before breakpoint size)
+*/
+.ios .panel-left:not(.panel-visible-by-breakpoint).panel-active ~ .view-main:before,
+.ios .panel-left:not(.panel-visible-by-breakpoint).panel-closing ~ .view-main:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+
+
+.left-panel-icon {
+  background-image: url("../assets/images/bars-line.png");
+  background-repeat: no-repeat;
+  margin-top: 50%;
+  margin-left: 25%;
+}
+
+.navbar-title {
+  height: 70%;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.navbar-title-img {
+  width: 200px;
+  height: auto;
+}
+
+.navbar-login-icon {
+  background-image: url("../assets/images/login-solid.png");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  margin-right: -10px;
+}
+
+.grey {
+  font-weight: 200;
+  color: #666;
+}
+
+.back-link-nav {
+  width: 100px;
+}
+
+.back-text {
+  margin-left: -10px;
+}
+
+.banner-container {
+  margin-left: -10px;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.products-container {
+  margin-top: -10px;
+}
+
+.product-img {
+  width: 90%
+}
+
+.product-image {
+  margin-top: 30px;
+}
+
+.product-name {
+  font-size: 20px;
+}
+
+.product-price {
+  margin-top: -20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.product-desc {
+  color: #666;
+  font-size: 18px;
+}
+
+.single-product {
+  margin: -10px 0 20px 10px;
+}
+
+.single-product-container {
+  margin-bottom: 25px;
+}
+
+.product-btn {
+  height: 40px;
+  font-size: 18px;
+  padding-top: 2px;
+  margin-bottom: 20px;
+}
+
+.main-view-body {
+  /* max-width: 1000px;
+  margin: auto; */
+}
+
+/* .main-content {
+  max-width: 1000px;
+  margin: auto;
+} */
+
+.main-content-product-page {
+  max-width: 800px;
+  margin: auto;
+  height: 120%;
+}
+
+@media only screen and (min-width: 800px) {
+  .home-banners {
+    max-width: 40%;
+    float: right;
+    margin-top: 1%;
+  }
+
+  .left-content {
+    max-width: 60%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .products-container {
+    margin: auto;
+  }
+
+  .single-product-container {
+    width: 45%;
+    float: left;
+    margin: 20px 0 10px 30px;
+  }
+
+  hr {
+    display: none;
+  }
+}
